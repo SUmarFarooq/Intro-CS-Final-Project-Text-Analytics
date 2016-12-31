@@ -1,2 +1,4 @@
 # Intro-CS-Final-Project-Text-Analytics
-For my introductory CS class, CS5 at Harvey Mudd College, myself and my teammates created a program which takes in a text file of unknown origin and compares it with two trained models. The program scores the text based on its similarity to the two models and picks which model the unknown text is most similar to.
+For my introductory CS class, CS5 at Harvey Mudd College, myself and my teammates (Jenny Canq and Grace Stewart) created a program which takes in a text file of unknown origin and compares it with two trained models. The program scores the text based on its similarity to the two models and picks which model the unknown text is most similar to.
+
+The program uses five metrics to judge text similarity: word lengths, word stems, sentence lengths, punctuation usage, and the number of words in a sentence. For each of the metrics, a log probability is generated between the unknown text and each of the two text models. Whichever model has the log probability closest to 0 is declared the winner of that metric, and whichever model has the most metrics is declared the most similar to the unknown text.
