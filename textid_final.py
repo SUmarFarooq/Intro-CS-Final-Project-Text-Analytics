@@ -1,7 +1,4 @@
 #Jenny(Yuqing) Cang, Grace Stewart, and Umar Farooq
-#Final woo!
-
-
 
 from porter import create_stem
 import math
@@ -31,7 +28,6 @@ class TextModel:
 		s += "    n. of word lengths: " + str(len(self.wordlengths))  + "\n"
 		s += "    n. of sentence lengths: " + str(len(self.sentencelengths))  + "\n"
 		s += "    n. of stems: " + str(len(self.stems))  + "\n"
-		# you will likely want another line for your custom text-feature!
 		return s
 
 	def readTextFromFile(self,filename):
@@ -143,6 +139,7 @@ class TextModel:
 		print ("self.stems:", self.stems, '\n')
 		print ("self.punc:", self.punc, '\n')
 
+# Tests below
 # put the text between these triple-quotes into a file named test.txt
 # test_text = """This is a small sentence. This isn't a small sentence, because
 # this sentence contains more than 10 words and a number! This isn't
@@ -366,7 +363,7 @@ Our two models were based on scripts from Friends and Seinfeld, testing whether 
 
 We found that our models mostly worked. Initially, they didn't work very well at all. We chose an episode from Friends and one from Seinfeld as our corpuses (corpi?) as well as an episode from each as our unknown. Each result was the opposite of the real answer (e.g., our model would find that the test episode from Friends was more likely to be from Seinfeld than from Friends.) Prof Dodds told us to test on half an episode instead of a whole one, and this fixed our problem. We then expanded our corpuses to 4 episodes per show and tested on the script from a whole episode instead of a half. We found that our model returned the correct results for the test script from Friends (3-2 in favor of Friends) but still did not return the right result for the Seinfeld test episode.
 
-We did not quite expect these results. Straight up, we thought these would be pretty straightforward wins for one show over the other, especially because of the presence of character names in each show. Still, we think it's possible the models are so close to one another because of the general, everyday language used in sitcoms, and because the scripts contain things like stage cues (Jerry Seinfeld sitting on couch, Kramer walks in) and things like that. """ 
+We did not quite expect these results. We expected the correct show would win over the other, especially because of the presence of character names in each show. Still, we think it's possible the models are so close to one another because of the general, everyday language used in sitcoms, and because the scripts contain things like stage cues (Jerry Seinfeld sitting on couch, Kramer walks in) and things like that. """ 
 
 # EXTRA (CREDIT) Text Models: Musicals
 
